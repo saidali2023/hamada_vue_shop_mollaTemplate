@@ -365,3 +365,6 @@
       <!-- Main JS File -->
       <script src="{{asset('front/assets/js/main.js')}}"></script>
       <script src="{{asset('front/assets/js/demos/demo-4.js')}}"></script>
+
+
+      <script src="{{asset('js/app.js')}}" defer ></script>

@@ -13,11 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('front.home');
-});
 
+Route::get('/', function () {
+    return view('front.index');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('signoutinstructors', 'Auth\UserLoginController@signOutInstructors')->name('signoutinstructors');
+Route::get('{any}',function($any){
+    return view('front.index');
+})->where('any','.*');
